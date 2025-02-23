@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktvorm</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Võta meiega ühendust</h1>
+        
+        <div id="successMessage" class="hidden">
+            <h2>Täname meiega ühendust võtmast!</h2>
+            <img id="successImage" src="https://picsum.photos/400/200" alt="Täname">
+        </div>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nimi:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Sõnum:</label>
+                <textarea id="message" name="message" required></textarea>
+                <span class="error" id="messageError"></span>
+            </div>
+
+            <button type="submit">Saada</button>
+        </form>
+
+        <button type="button" id="togglePrevious" class="secondary-button">Näita/Peida eelmist sõnumit</button>
+        <div id="previousSubmission" class="hidden">
+            <h3>Teie eelmine sõnum:</h3>
+            <p id="previousMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
